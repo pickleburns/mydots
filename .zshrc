@@ -43,5 +43,6 @@ export EDITOR='vim'
 setopt append_history hist_ignore_dups hist_find_no_dups
 
 source "$HOME/.zshenv"
-PATH=/usr/local/bin:$PATH:$HOME/bin
+PATH=/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH:$HOME/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+. ~/.liquidprompt/liquidprompt
