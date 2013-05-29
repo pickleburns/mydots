@@ -5,4 +5,4 @@ Rememebr to set up your ~/.tmp folder
 
 Remember to get liquidprompt and remember also set your default login shell to /bin/zsh
 
-and of course install ack, and git, and homebrew, and rvm.
+and of course install ack, and git, and homebrew, and rvm (and gitflow and postgres and...).
