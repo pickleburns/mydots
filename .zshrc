@@ -42,6 +42,16 @@ export EDITOR='vim'
 
 setopt append_history hist_ignore_dups hist_find_no_dups
 
+# Git command for Dartmouth
+function new-git() {
+ssh webops@dev.dartmouth.edu "mkdir git/$1.git && cd git/$1.git && git --bare init"
+git remote add origin webops@dev.dartmouth.edu:git/$1.git
+git push origin master
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+git config push.default current
+}
+
 source "$HOME/.zshenv"
 PATH=/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH:$HOME/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
