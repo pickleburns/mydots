@@ -38,7 +38,12 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=500
 export SAVEHIST=500
 
-export EDITOR='vim'
+if [ -x /Applications/MacVim.app/Contents/MacOS/Vim ]
+then
+  export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+else
+  export EDITOR='vim'
+fi
 
 setopt append_history hist_ignore_dups hist_find_no_dups
 
