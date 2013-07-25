@@ -1,8 +1,11 @@
 ==MY DOT FILES
 For me to set up new machines. I guess you can look at them. They're probably a mess. But they're mine.
 
-Rememebr to set up your ~/.tmp folder
-
-Remember to get liquidprompt and remember also set your default login shell to /bin/zsh
+Do these things:
+ * set up your ~/.tmp folder
+ * get liquidprompt 
+ * set your default login shell to /bin/zsh
+ * get iTerm2 installed
+ * set iterm terminal emulation to xterm-256color
 
 and of course install ack, and git, and homebrew, and rvm (and gitflow and postgres and...).
