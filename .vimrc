@@ -126,8 +126,10 @@ if !exists(":DiffOrig")
 endif
 
 " additional commands
-colorscheme pablo 
 if has("gui_running")
   set guifont=Monaco:h14
 endif
 call pathogen#infect()
+
+set background=dark
+colorscheme solarized
