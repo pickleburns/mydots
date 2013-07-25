@@ -58,6 +58,6 @@ git config push.default current
 }
 
 source "$HOME/.zshenv"
-PATH=/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH:$HOME/bin
+PATH=$HOME/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 . ~/.liquidprompt/liquidprompt
