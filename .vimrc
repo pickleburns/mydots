@@ -127,7 +127,7 @@ endif
 
 " additional commands
 if has("gui_running")
-  set guifont=Monaco:h14
+  set guifont=Source\ Code\ Pro\ Light:h14
 endif
 call pathogen#infect()
 
