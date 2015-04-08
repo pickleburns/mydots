@@ -57,6 +57,22 @@ git config branch.master.merge refs/heads/master
 git config push.default current
 }
 
+# NEW Git command for Dartmouth
+function dartgit() {
+git clone git@codehome.dartmouth.edu:webops/$1
+cd $1
+git flow init
+git push origin master
+git config branch.master.remote origin
+git config branch.develop.merge refs/heads/develop
+git config push.default current
+git push
+}
+
+function dartlist() {
+ssh git@codehome.dartmouth.edu list
+}
+
 source "$HOME/.zshenv"
 PATH=$HOME/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
