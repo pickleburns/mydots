@@ -47,33 +47,26 @@ fi
 
 setopt append_history hist_ignore_dups hist_find_no_dups
 
-# Git command for Dartmouth
-function new-git() {
-ssh webops@dev.dartmouth.edu "mkdir git/$1.git && cd git/$1.git && git --bare init"
-git remote add origin webops@dev.dartmouth.edu:git/$1.git
-git push origin master
-git config branch.master.remote origin
-git config branch.master.merge refs/heads/master
-git config push.default current
-}
-
-# NEW Git command for Dartmouth
-function dartgit() {
-git clone git@codehome.dartmouth.edu:webops/$1
-cd $1
-git flow init
-git push origin master
-git config branch.master.remote origin
-git config branch.develop.merge refs/heads/develop
-git config push.default current
-git push
-}
-
 function dartlist() {
 ssh git@codehome.dartmouth.edu list
 }
 
+function set-grails25(){
+  export GRAILS_OPTS="-server -Xms1024m -XX:MaxPermSize=1024m -Xmx2048M -XX:PermSize=256m"
+  export GRAILS_HOME=$HOME/Grailses/grails-2.5.0
+  export PATH=$GRAILS_HOME/bin:$PATH
+  export JAVA_HOME=$JAVA_HOME
+}
+
+function unset-grails(){
+  unset GRAILS_OPTS=""
+  unset GRAILS_HOME=""
+}
+
 source "$HOME/.zshenv"
-PATH=$HOME/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source "$HOME/.iterm2_shell_integration.zsh"
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+PATH=$HOME/bin:$HOME/Library/Python/2.7/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 . ~/.liquidprompt/liquidprompt
+
+eval "$(rbenv init -)"
