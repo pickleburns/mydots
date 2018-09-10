@@ -66,7 +66,7 @@ function unset-grails(){
 source "$HOME/.zshenv"
 source "$HOME/.iterm2_shell_integration.zsh"
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
-PATH=$HOME/bin:$HOME/Library/Python/2.7/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
+PATH=$HOME/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$HOME/Library/Python/3.7/bin:$PATH
 . ~/.liquidprompt/liquidprompt
 
 eval "$(rbenv init -)"

@@ -17,9 +17,13 @@ then
 	alias mc='. /usr/libexec/mc/mc-wrapper.sh'
 fi
 
-if [ -x /Applications/MacVim.app/Contents/MacOS/Vim ]
-then
-        alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+# if [ -x /Applications/MacVim.app/Contents/MacOS/Vim ]
+# then
+#   alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+# fi
+
+if type "nvim" > /dev/null; then
+  alias vim='nvim'
 fi
 
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -28,3 +32,6 @@ alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias gptag='git push && git push --tags && git checkout develop'
 
 alias antidiff="perl -ne 'print if ($seen{$_} .= @ARGV) =~ /10$/'"
+
+alias python="python3"
+alias pip="pip3"
