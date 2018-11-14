@@ -52,20 +52,30 @@ ssh git@codehome.dartmouth.edu list
 }
 
 function set-grails25(){
-  export GRAILS_OPTS="-server -Xms1024m -XX:MaxPermSize=1024m -Xmx2048M -XX:PermSize=256m"
-  export GRAILS_HOME=$HOME/Grailses/grails-2.5.0
+  export GRAILS_OPTS="-server -Xms2048m -XX:MaxPermSize=2048m -Xmx4096M -XX:PermSize=2048m"
+  export GRAILS_HOME=$HOME/grails/grails-2.5.0
   export PATH=$GRAILS_HOME/bin:$PATH
-  export JAVA_HOME=$JAVA_HOME
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+  #export JAVA_HOME=$JAVA_HOME
 }
 
 function unset-grails(){
-  unset GRAILS_OPTS=""
-  unset GRAILS_HOME=""
+  WPATH=:$PATH:
+  REMOVE=$GRAILS_HOME/bin
+  WPATH=${WPATH/:$REMOVE:/:}
+  WPATH=${WPATH%:}
+  WPATH=${WPATH#:}
+  PATH=$WPATH
+  unset GRAILS_OPTS
+  unset GRAILS_HOME
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
 }
 
 source "$HOME/.zshenv"
 source "$HOME/.iterm2_shell_integration.zsh"
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+#JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+OCI_DIR=~/opt/oracle/instantclient_12_2
 PATH=$HOME/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/bin:$HOME/Library/Python/3.7/bin:$PATH
 . ~/.liquidprompt/liquidprompt
 
