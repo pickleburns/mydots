@@ -143,12 +143,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 let python_highlight_all=1
 
-" python with virtualenv support
-" py << EOF
-" import os
-" import sys
-" if 'VIRTUAL_ENV' in os.environ:
-"     project_base_dir = os.environ['VIRTUAL_ENV']
-"     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"     execfile(activate_this, dict(__file__=activate_this))
-" EOF
+if !empty($VIRTUAL_ENV)
+  let v_path=system('echo $VIRTUAL_ENV')
+  let venv_path=substitute(v_path, '\n', '', '')
+  let g:ycm_python_binary_path=venv_path . '/bin/python'
+endif
