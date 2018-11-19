@@ -28,15 +28,9 @@
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/vimroom"]
-	path = .vim/bundle/vimroom
-	url = https://github.com/mikewest/vimroom.git
 [submodule ".vim/bundle/vim-rspec"]
 	path = .vim/bundle/vim-rspec
 	url = git://github.com/thoughtbot/vim-rspec.git
-[submodule ".vim/bundle/rust.vim"]
-	path = .vim/bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule ".vim/bundle/typescript-vim"]
 	path = .vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
