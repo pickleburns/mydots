@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 #This sets up a home tmp directory and symlinks all of the dotfiles into place.
 HDIR="$HOME"
