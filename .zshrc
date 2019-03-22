@@ -56,6 +56,7 @@ function set-grails25(){
   export GRAILS_HOME=$HOME/grails/grails-2.5.0
   export PATH=$GRAILS_HOME/bin:$PATH
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+  export JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
   #export JAVA_HOME=$JAVA_HOME
 }
 
@@ -68,6 +69,7 @@ function unset-grails(){
   PATH=$WPATH
   unset GRAILS_OPTS
   unset GRAILS_HOME
+  unset JAVA_TOOL_OPTIONS
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
 }
 

@@ -35,3 +35,4 @@ alias antidiff="perl -ne 'print if ($seen{$_} .= @ARGV) =~ /10$/'"
 
 alias python="python3"
 alias pip="pip3"
+alias penv=". venv/bin/activate"
